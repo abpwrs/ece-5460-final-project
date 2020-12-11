@@ -32,3 +32,9 @@ function updateSlide(e){
     audio.play();
       
 }
+
+function updateCheck(e) {
+    var audio = document.getElementById('audio');
+    audio.loop = !audio.loop
+    audio.play()
+}

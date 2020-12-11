@@ -18,6 +18,9 @@
 <body>
     <div class="main">
         <h1>Yanny/Laurel DSP Pitch Shifting Project</h1>
+        <div class="loop">
+            Loop: <input type="checkbox" onchange='updateCheck(this.value)'>
+        </div>
         <div class="slider">
             <p>Yanny</p><input onchange='updateSlide(this.value)' id="slidster" name="slidster" type="range" min="0" max="18" step="1"><p>Laurel</p>
         </div>
