@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSP Final Project</title>
+
+    {% assets "js_all" %}
+        <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+    {% endassets %} 
+    
+    {% assets "scss_all" %}
+        <link rel=stylesheet type=text/css href="{{ ASSET_URL }}">
+    {% endassets %}
+
+</head>
+
+<body>
+    <div class="main">
+        <h1>Yanny/Laurel DSP Pitch Shifting Project</h1>
+        <div class="slider">
+            <p>Yanny</p><input onchange='updateSlide(this.value)' id="slidster" name="slidster" type="range" min="0" max="18" step="1"><p>Laurel</p>
+        </div>
+        <audio id="audio" controls="controls">
+            <source id="audioSource" src="static/0.ogg"></source>
+            Your browser does not support the audio format.
+        </audio>
+        <div id="filename">0.ogg</div>
+    </div>
+</body>
+</html>
